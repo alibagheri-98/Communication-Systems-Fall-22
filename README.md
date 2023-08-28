@@ -5,4 +5,5 @@ In this repository, I have compiled all the course materials related to this cla
 
 - The materials for the slides can be found in the "Slides" folder.
 - The materials for the assignments can be found in the "HW" folder.
-- The materials for the final project can be found in the "Project" folder.
+- - The materials for the solutions of assignments can be found in the "HW_Solutions" folder.
+- The materials for the final project can be found in the "Final Project" folder.
