@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cleese Assignment (For Students)
+% LaTeX Template
+% Version 2.0 (27/5/2018)
+%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%
+% Author:
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+\usepackage[printwatermark]{xwatermark}
+\newwatermark[allpages,color=gray!50,angle=45,scale=2.5,xpos=-5,ypos=-5]{Mohammad Hadi}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+% Required
+\newcommand{\assignmentQuestionName}{Task} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{Communication Systems (Taught by Mohammad Hadi)\\Final Project (Due on DDD.,\ mmm.\ dd,\ yyyy)} % Course (Lecturer)\\Assignment (Due date)
+\newcommand{\assignmentTitle}{} % Assignment title or name
+\newcommand{\assignmentAuthorName}{Student Name\\Student Number} % Student name\\Student number
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	Task 1
+%----------------------------------------------------------------------------------------
+
+\begin{question}
+\questiontext{Here, we intend to simulate a realtime digital baseband communication system in MATLAB. Consider the general block diagram of Fig. \ref{fig:model}, where
+\begin{enumerate}
+\item ADC generates a PCM voice with sampling rate $f_s$ and number of quantization bits $\nu$.
+\item Line coder generates a binary polar Nyquist line code with rolloff factor $\beta$, baud rate $r$, and amplitude $\pm A$.
+\item Channel adds additive zero-mean Gaussian noise with variance $\sigma^2=N_0B$, where $B$ is the channel bandwidth and $N_0$ denotes noise power spectral density.
+\item Line decoder has a perfect synchronization circuit.
+\end{enumerate}
+}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{Fig/model.pdf}
+\caption{Block diagram of a digital baseband communication system.}\label{fig:model}
+\end{figure}
+%--------------------------------------------
+\begin{subquestion}{Write a MATLAB code to simulate the communication system. Create separate functions for each block and then, connect them in a main mfile. Name the functions adc, linecoder, channel, linedecoder, and dac. Each function might have an arbitrary number of input arguments. For example, adc function might accept $\nu$ and $f_s$ as its input arguments.
+} 
+\end{subquestion}
+%--------------------------------------------
+\begin{subquestion}{Feed your simulation setup with a recorded audio file and play the received voice and hear it for different noise level $N_0$ and channel bandwidth $B$. Assume that the ADC/DAC parameters are suitably tuned such that aliasing and SQNR have acceptable values and the channel bandwidth is enough such that no ISI appears. How do you feel when you hear the received voice? Note that you can record your voice from your laptop microphone and feed it to the communication system. You can also hear the received voice via your laptop speaker. MATLAB has useful internal commands for working with microphones and speakers!
+} 
+\end{subquestion}
+%--------------------------------------------
+\begin{subquestion}{Use the simulation setup to calculate the BER of the system and plot it in terms of noise variance $\sigma^2$ and amplitude $A$. Assume that the ADC/DAC parameters are suitably tuned such that aliasing and SQNR have acceptable values and the channel bandwidth is enough such that no ISI appears. Discus the obtained plots.
+} 
+\end{subquestion}
+%--------------------------------------------
+\begin{subquestion}{Repeat the previous two parts when the channel bandwidth limitation imposes ISI. Investigate the impact of rolloff factor $\beta$ on the imposed ISI.
+} 
+\end{subquestion}%--------------------------------------------
+\begin{subquestion}{Investigate the impact of the sampling rate $f_s$ and number of quantization bits $\nu$ on the performance of the communication system.
+} 
+\end{subquestion}
+%--------------------------------------------
+\begin{subquestion}{Prepare a short report and describe your work concisely. Use suitable figures to better describe the developed codes and to make your report more readable and understandable. Attach samples of the recorded audios as well as the developed codes to your sent report. 
+} 
+\end{subquestion}
+%--------------------------------------------
+\begin{subquestion}{\textbf{Bonus!} Make your simulation setup realtime. In this way, you talk to the microphone and hear the received voice from the speaker simultaneously without any delay and lag. 
+} 
+\end{subquestion}
+%--------------------------------------------
+\begin{subquestion}{\textbf{Bonus!} Write your report in \LaTeX.
+} 
+\end{subquestion}
+\end{question}
+\end{document}
